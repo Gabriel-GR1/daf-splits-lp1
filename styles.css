@@ -101,6 +101,17 @@ h1 em { display:block; color:#e1ad50; font-style:normal; }
 .people-count > span { width:38px; height:2px; background:var(--gold); grid-row:1 / 3; }
 .people-count strong { font-size:22px; color:#e3b65f; font-weight:600; }
 .people-count small { font-size:15px; color:#eee8dd; }
+.community-no-photo { display:block; min-height:390px; }
+.community-no-photo .community-copy {
+  min-height:390px;
+  padding-left:max(28px, calc((100vw - 900px) / 2));
+  padding-right:max(28px, calc((100vw - 900px) / 2));
+  background:
+    radial-gradient(circle at 82% 25%,rgba(143,72,18,.10),transparent 28%),
+    radial-gradient(circle at 15% 80%,rgba(112,59,18,.08),transparent 24%),
+    #050505;
+}
+.community-no-photo .community-copy > p { max-width:680px; }
 .benefits { min-height:250px; display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid var(--line); background:radial-gradient(circle at 100% 100%,rgba(128,68,18,.13),transparent 30%),#050505; }
 .benefits article { padding:42px 26px 36px; text-align:center; position:relative; }
 .benefits article + article::before { content:''; position:absolute; left:0; top:55px; bottom:45px; width:1px; background:rgba(226,176,76,.20); }
@@ -127,6 +138,8 @@ footer p { margin:0; font-size:9px; letter-spacing:.32em; color:#ddd6cb; }
   .community-photo { min-height:430px; }
   .community-photo::after { background:linear-gradient(0deg,#050505 0%,transparent 26%); }
   .community-copy { padding:36px 24px 48px; }
+  .community-no-photo { min-height:auto; }
+  .community-no-photo .community-copy { min-height:340px; padding:42px 24px 48px; }
   .benefits { grid-template-columns:1fr; padding-left:24px; padding-right:24px; }
   .benefits article { padding:30px 10px; }
   .benefits article + article::before { left:18%; right:18%; top:0; bottom:auto; width:auto; height:1px; }
@@ -143,7 +156,6 @@ footer p { margin:0; font-size:9px; letter-spacing:.32em; color:#ddd6cb; }
   .cta svg { width:24px; }
   .cta b { font-size:22px; }
   .hero-visual { min-height:360px; height:48vh; }
-  .community-photo { min-height:350px; }
   .community-copy h2 { font-size:42px; }
   .community-copy > p { font-size:14px; }
   .people-count strong { font-size:20px; }
