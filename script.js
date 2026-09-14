@@ -1,4 +1,4 @@
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/GCi2WhyhAPXEExFhNszgoX?s=cl&p=a&mlu=4&ilr=4';
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/EdzyVNDL1B4FIjU8irkXNP';
 
 const menuButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu');
