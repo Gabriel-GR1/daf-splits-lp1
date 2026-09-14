@@ -1,4 +1,4 @@
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/SEU-LINK-DO-GRUPO';
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/GCi2WhyhAPXEExFhNszgoX?s=cl&p=a&mlu=4&ilr=4';
 
 const menuButton = document.querySelector('.menu-button');
 const menu = document.querySelector('.menu');
@@ -17,16 +17,11 @@ document.addEventListener('click', (event) => {
 });
 
 whatsappLinks.forEach(link => {
-  link.addEventListener('click', (event) => {
-    if (WHATSAPP_GROUP_URL.includes('SEU-LINK-DO-GRUPO')) {
-      event.preventDefault();
-      console.warn('Configure WHATSAPP_GROUP_URL em script.js antes de publicar os anúncios.');
-      return;
-    }
+  link.href = WHATSAPP_GROUP_URL;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
 
-    link.href = WHATSAPP_GROUP_URL;
-    link.target = '_blank';
-
+  link.addEventListener('click', () => {
     if (typeof window.fbq === 'function') {
       window.fbq('trackCustom', 'WhatsAppGroupClick');
     }
