@@ -10,20 +10,24 @@ Primeira versão responsiva baseada no protótipo visual aprovado.
 
 - `index.html` — estrutura da LP
 - `styles.css` — identidade visual e responsividade
+- `mobile.css` — refinamentos específicos para mobile
 - `script.js` — menu, redirecionamento para WhatsApp e hooks de tracking
-- `assets/logo.webp` — logo DAF
+- `assets/logo.svg` — logo DAF
 - `assets/hero.webp` — visual do hero
-- `assets/community.webp` — visual da seção de comunidade
 
-## Configurar o grupo do WhatsApp
+## Terminologia
 
-Antes de publicar anúncios, abra `script.js` e substitua:
+Usar sempre **perfumaria** nas comunicações e textos do projeto.
 
-```js
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/SEU-LINK-DO-GRUPO';
+## Grupo do WhatsApp
+
+Link atual do grupo:
+
+```txt
+https://chat.whatsapp.com/EdzyVNDL1B4FIjU8irkXNP
 ```
 
-pelo link real do grupo.
+O mesmo endereço também está definido em `script.js` como `WHATSAPP_GROUP_URL`.
 
 ## Tracking
 
