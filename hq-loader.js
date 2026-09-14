@@ -44,10 +44,5 @@ loadHqImage('.hero-visual img', [
 ]);
 
 loadHqImage('.community-photo img', [
-  './assets/hq/community-fix-00.txt',
-  './assets/hq/community-fix-00b.txt',
-  './assets/hq/community-fix-01.txt',
-  './assets/hq/community-fix-02.txt',
-  './assets/hq/community-fix-03.txt',
-  './assets/hq/community-fix-04.txt'
+  './assets/community2.b64.txt'
 ]);
