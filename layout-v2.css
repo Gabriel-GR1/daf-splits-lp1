@@ -37,7 +37,7 @@
 }
 
 .feedback-viewport {
-  min-height: 220px;
+  min-height: 480px;
   overflow: hidden;
   border: 1px solid rgba(226, 176, 76, .26);
   border-radius: 18px;
@@ -49,7 +49,7 @@
 }
 
 .feedback-track {
-  min-height: 220px;
+  min-height: 480px;
   display: flex;
   transition: transform .35s ease;
   will-change: transform;
@@ -57,7 +57,20 @@
 
 .feedback-card {
   flex: 0 0 100%;
-  padding: 30px;
+  margin: 0;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.feedback-card img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 440px;
+  border-radius: 14px;
+  box-shadow: 0 18px 44px rgba(0,0,0,.42);
 }
 
 .feedback-arrow {
@@ -83,26 +96,14 @@
   cursor: default;
 }
 
-.feedback-carousel[data-empty="true"] .feedback-viewport {
-  min-height: 230px;
-}
-
+.feedback-carousel[data-empty="true"] .feedback-viewport,
 .feedback-carousel[data-empty="true"] .feedback-track {
   min-height: 230px;
 }
 
 .community-moved {
   min-height: 400px;
-  grid-template-columns: 1.03fr .97fr;
   background: #050505;
-}
-
-.community-moved .community-photo {
-  min-height: 400px;
-}
-
-.community-moved .community-photo img {
-  object-position: center 45%;
 }
 
 .community-moved .community-copy {
@@ -120,30 +121,37 @@
   }
 
   .feedback-carousel {
-    grid-template-columns: 1fr;
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 10px;
     margin-top: 26px;
   }
 
   .feedback-arrow {
-    display: none;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
   }
 
   .feedback-viewport,
-  .feedback-track,
+  .feedback-track {
+    min-height: 450px;
+  }
+
+  .feedback-card {
+    padding: 16px;
+  }
+
+  .feedback-card img {
+    max-height: 418px;
+  }
+
   .feedback-carousel[data-empty="true"] .feedback-viewport,
   .feedback-carousel[data-empty="true"] .feedback-track {
     min-height: 190px;
   }
 
   .community-moved {
-    grid-template-columns: 1fr;
     min-height: 0;
-  }
-
-  .community-moved .community-photo {
-    min-height: 340px;
-    height: 48vw;
-    max-height: 430px;
   }
 
   .community-moved .community-copy {
@@ -167,20 +175,34 @@
   }
 
   .feedback-carousel {
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 7px;
     margin-top: 22px;
   }
 
+  .feedback-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+
   .feedback-viewport,
-  .feedback-track,
+  .feedback-track {
+    min-height: 410px;
+  }
+
+  .feedback-card {
+    padding: 12px 8px;
+  }
+
+  .feedback-card img {
+    max-height: 386px;
+    border-radius: 11px;
+  }
+
   .feedback-carousel[data-empty="true"] .feedback-viewport,
   .feedback-carousel[data-empty="true"] .feedback-track {
     min-height: 160px;
-  }
-
-  .community-moved .community-photo {
-    min-height: 285px;
-    height: 68vw;
-    max-height: 360px;
   }
 
   .community-moved .community-copy {
