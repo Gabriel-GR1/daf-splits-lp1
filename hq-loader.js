@@ -42,10 +42,3 @@ loadHqImage('.hero-visual img', [
   './assets/hq/hero-03.txt',
   './assets/hq/hero-04.txt'
 ]);
-
-loadHqImage('.community-photo img', [
-  './assets/hq/community-00.txt',
-  './assets/hq/community-01a.txt',
-  './assets/hq/community-01b.txt',
-  './assets/hq/community-02.txt'
-]);
