@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./mobile.css" />
+  <link rel="stylesheet" href="./layout-v2.css" />
 </head>
 <body>
   <header class="header">
@@ -20,7 +21,7 @@
       <button class="menu-button" type="button" aria-label="Abrir navegação" aria-expanded="false"><i></i><i></i><i></i></button>
     </div>
     <nav class="menu" aria-label="Navegação da página">
-      <a href="#comunidade">Comunidade</a><a href="#beneficios">Benefícios</a><a href="#entrar">Entrar no grupo</a>
+      <a href="#feedbacks">Feedbacks</a><a href="#comunidade">Comunidade</a><a href="#entrar">Entrar no grupo</a>
     </nav>
   </header>
 
@@ -39,28 +40,33 @@
       <div class="hero-visual" aria-label="Caixa aberta da DAF Splits com decantes"><img src="./assets/hero.webp" width="934" height="981" fetchpriority="high" decoding="async" alt="Caixa da DAF Splits com dois decantes" /></div>
     </section>
 
-    <section class="community community-no-photo" id="comunidade">
+    <section class="feedbacks" id="feedbacks">
+      <div class="feedbacks-inner section-pad">
+        <div class="feedbacks-heading">
+          <p class="kicker"><span></span>FEEDBACKS DE CLIENTES<span></span></p>
+          <h2>EXPERIÊNCIAS DE QUEM JÁ COMPROU COM A DAF.</h2>
+        </div>
+
+        <div class="feedback-carousel" data-empty="true" aria-label="Carrossel de feedbacks de clientes">
+          <button class="feedback-arrow feedback-prev" type="button" aria-label="Feedback anterior" disabled>←</button>
+          <div class="feedback-viewport">
+            <div class="feedback-track" aria-live="polite"></div>
+          </div>
+          <button class="feedback-arrow feedback-next" type="button" aria-label="Próximo feedback" disabled>→</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="community community-moved" id="comunidade">
+      <div class="community-photo">
+        <img src="./assets/community.webp" alt="Perfume Nishane Hacivat em destaque" loading="lazy" decoding="async" />
+      </div>
       <div class="community-copy section-pad-half">
         <p class="kicker"><span></span>COMUNIDADE DAF SPLITS<span></span></p>
         <h2>PARA QUEM VIVE<br />PERFUMES DE VERDADE.</h2>
         <p>Um espaço para quem aprecia fragrâncias exclusivas, novos achados e experiências fora do comum.</p>
         <div class="people-count"><span></span><strong>+800 pessoas</strong><small>já fazem parte.</small></div>
       </div>
-    </section>
-
-    <section class="benefits section-pad" id="beneficios">
-      <article>
-        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 52 13v15c0 13-8 23-20 30C20 51 12 41 12 28V13l20-7Z"/><path d="m23 31 6 6 12-14"/></svg>
-        <h3>PERFUMARIA<br />DE NICHO</h3><p>As melhores fragrâncias,<br />selecionadas para você.</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 27 31 7h19l7 7v19L34 56 8 30Z"/><circle cx="45" cy="19" r="4"/></svg>
-        <h3>PROMOÇÕES<br />EXCLUSIVAS</h3><p>Condições especiais<br />para o grupo.</p>
-      </article>
-      <article>
-        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M21 45h22l-3-5V27c0-8-3-13-8-13s-8 5-8 13v13l-3 5Z"/><path d="M27 49c1 5 9 5 10 0M32 7v7"/></svg>
-        <h3>LANÇAMENTOS<br />EM PRIMEIRA MÃO</h3><p>Seja o primeiro<br />a saber.</p>
-      </article>
     </section>
 
     <section class="final-cta" id="entrar">
