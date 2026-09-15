@@ -31,25 +31,27 @@
   position: relative;
   margin-top: 34px;
   display: grid;
-  grid-template-columns: 46px minmax(0, 1fr) 46px;
-  gap: 16px;
+  grid-template-columns: 52px minmax(0, 430px) 52px;
+  gap: 18px;
   align-items: center;
+  justify-content: center;
 }
 
 .feedback-viewport {
-  min-height: 480px;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  min-height: 0;
   overflow: hidden;
   border: 1px solid rgba(226, 176, 76, .26);
-  border-radius: 18px;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, 0)),
-    radial-gradient(circle at 50% 0%, rgba(226, 176, 76, .07), transparent 42%),
-    rgba(9, 9, 9, .72);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.015);
+  border-radius: 20px;
+  background: #070707;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.015), 0 18px 44px rgba(0,0,0,.28);
 }
 
 .feedback-track {
-  min-height: 480px;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
   display: flex;
   transition: transform .35s ease;
   will-change: transform;
@@ -57,25 +59,31 @@
 
 .feedback-card {
   flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 20px;
-  display: grid;
-  place-items: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .feedback-card img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 440px;
-  border-radius: 14px;
-  box-shadow: 0 18px 44px rgba(0,0,0,.42);
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .feedback-arrow {
-  width: 46px;
-  height: 46px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   border: 1px solid rgba(226, 176, 76, .34);
   background: rgba(8,8,8,.86);
@@ -96,7 +104,11 @@
   cursor: default;
 }
 
-.feedback-carousel[data-empty="true"] .feedback-viewport,
+.feedback-carousel[data-empty="true"] .feedback-viewport {
+  aspect-ratio: auto;
+  min-height: 230px;
+}
+
 .feedback-carousel[data-empty="true"] .feedback-track {
   min-height: 230px;
 }
@@ -121,8 +133,8 @@
   }
 
   .feedback-carousel {
-    grid-template-columns: 42px minmax(0, 1fr) 42px;
-    gap: 10px;
+    grid-template-columns: 42px minmax(0, 390px) 42px;
+    gap: 12px;
     margin-top: 26px;
   }
 
@@ -130,24 +142,6 @@
     width: 42px;
     height: 42px;
     font-size: 18px;
-  }
-
-  .feedback-viewport,
-  .feedback-track {
-    min-height: 450px;
-  }
-
-  .feedback-card {
-    padding: 16px;
-  }
-
-  .feedback-card img {
-    max-height: 418px;
-  }
-
-  .feedback-carousel[data-empty="true"] .feedback-viewport,
-  .feedback-carousel[data-empty="true"] .feedback-track {
-    min-height: 190px;
   }
 
   .community-moved {
@@ -180,29 +174,16 @@
     margin-top: 22px;
   }
 
+  .feedback-viewport {
+    width: min(78vw, 360px);
+    justify-self: center;
+    border-radius: 18px;
+  }
+
   .feedback-arrow {
     width: 34px;
     height: 34px;
     font-size: 16px;
-  }
-
-  .feedback-viewport,
-  .feedback-track {
-    min-height: 410px;
-  }
-
-  .feedback-card {
-    padding: 12px 8px;
-  }
-
-  .feedback-card img {
-    max-height: 386px;
-    border-radius: 11px;
-  }
-
-  .feedback-carousel[data-empty="true"] .feedback-viewport,
-  .feedback-carousel[data-empty="true"] .feedback-track {
-    min-height: 160px;
   }
 
   .community-moved .community-copy {
