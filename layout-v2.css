@@ -31,7 +31,7 @@
   position: relative;
   margin-top: 34px;
   display: grid;
-  grid-template-columns: 52px minmax(0, 430px) 52px;
+  grid-template-columns: 52px minmax(0, 360px) 52px;
   gap: 18px;
   align-items: center;
   justify-content: center;
@@ -79,6 +79,7 @@
   object-position: center;
   border-radius: 0;
   box-shadow: none;
+  image-rendering: auto;
 }
 
 .feedback-arrow {
@@ -133,7 +134,7 @@
   }
 
   .feedback-carousel {
-    grid-template-columns: 42px minmax(0, 390px) 42px;
+    grid-template-columns: 42px minmax(0, 360px) 42px;
     gap: 12px;
     margin-top: 26px;
   }
