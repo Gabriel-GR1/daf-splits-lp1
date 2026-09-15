@@ -1,0 +1,1 @@
+JPEG feedback sprite pack generated from the original 9:16 screenshots.
